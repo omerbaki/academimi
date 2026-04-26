@@ -52,19 +52,21 @@ function App() {
       <h1>הכתבה</h1>
 
       {mode === 'menu' && (
-        <div className="bank-selection">
-          {allWords.length === 0 ? (
-            <p>No words available.</p>
-          ) : (
-            <div className="bank-buttons">
-              <button onClick={startAllWords} className="bank-btn">
-                מבחן כל המילים
-              </button>
-              <button onClick={startRandom10} className="bank-btn">
-                מבחן 10 מילים
-              </button>
-            </div>
-          )}
+        <div className="card">
+          <div className="bank-selection">
+            {allWords.length === 0 ? (
+              <p>No words available.</p>
+            ) : (
+              <div className="bank-buttons">
+                <button onClick={startAllWords} className="bank-btn">
+                  מבחן כל המילים
+                </button>
+                <button onClick={startRandom10} className="bank-btn">
+                  מבחן 10 מילים
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       )}
 

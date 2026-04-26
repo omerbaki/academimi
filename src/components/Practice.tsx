@@ -94,53 +94,55 @@ export default function Practice({ words, onComplete, onBack }: PracticeProps) {
   }
 
   return (
-    <div className="practice">
-      <button className="back-btn" onClick={onBack}>
-        Back
-      </button>
-
-      <div className="progress">
-        Word {currentIndex + 1} of {shuffledWords.length}
-      </div>
-
-      <div className="word-display">
-        <h2>{currentWord.english}</h2>
-        <button onClick={() => speakWord(currentWord.english)} className="speak-btn">
-          Hear Again
+    <div className="card">
+      <div className="practice">
+        <button className="back-btn" onClick={onBack}>
+          חזרה
         </button>
-      </div>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={userAnswer}
-          onChange={(e) => setUserAnswer(e.target.value)}
-          placeholder="Type Hebrew translation..."
-          dir="rtl"
-          disabled={showFeedback}
-          autoFocus
-        />
-        {!showFeedback && (
-          <button type="submit" disabled={!userAnswer.trim()}>
-            Check
-          </button>
-        )}
-      </form>
+        <div className="progress">
+          מילה {currentIndex + 1} מתוך {shuffledWords.length}
+        </div>
 
-      {showFeedback && (
-        <div className={`feedback ${lastCorrect ? 'correct' : 'incorrect'}`}>
-          {lastCorrect ? (
-            <p>Correct!</p>
-          ) : (
-            <p>
-              Incorrect. The correct answer is: <strong dir="rtl">{currentWord.hebrew}</strong>
-            </p>
-          )}
-          <button onClick={handleNext}>
-            {currentIndex + 1 >= shuffledWords.length ? 'See Results' : 'Next Word'}
+        <div className="word-display">
+          <h2>{currentWord.english}</h2>
+          <button onClick={() => speakWord(currentWord.english)} className="speak-btn">
+            שמע שוב
           </button>
         </div>
-      )}
+
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={userAnswer}
+            onChange={(e) => setUserAnswer(e.target.value)}
+            placeholder="הקלד את התרגום בעברית..."
+            dir="rtl"
+            disabled={showFeedback}
+            autoFocus
+          />
+          {!showFeedback && (
+            <button type="submit" disabled={!userAnswer.trim()}>
+              בדוק
+            </button>
+          )}
+        </form>
+
+        {showFeedback && (
+          <div className={`feedback ${lastCorrect ? 'correct' : 'incorrect'}`} dir='rtl'>
+            {lastCorrect ? (
+              <p>נכון!</p>
+            ) : (
+              <p>
+                לא נכון. התשובה הנכונה: <strong dir="rtl">{currentWord.hebrew}</strong>
+              </p>
+            )}
+            <button onClick={handleNext}>
+              {currentIndex + 1 >= shuffledWords.length ? 'לתוצאות' : 'המילה הבאה'}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
