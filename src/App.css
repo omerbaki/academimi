@@ -342,6 +342,17 @@ h1 {
   box-shadow: 0 8px 25px rgba(17, 153, 142, 0.5);
 }
 
+/* Wrong Words Button */
+.wrong-words-btn {
+  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  color: #5a3000;
+  box-shadow: 0 4px 15px rgba(247, 151, 30, 0.4);
+}
+
+.wrong-words-btn:hover {
+  box-shadow: 0 8px 25px rgba(247, 151, 30, 0.5);
+}
+
 /* Verb Sentence Display */
 .verb-sentence {
   font-size: 26px;
