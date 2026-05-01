@@ -7,6 +7,10 @@ interface VerbPracticeProps {
   onBack: () => void;
 }
 
+const normalizeApostrophes = (text: string) => {
+  return text.replace(/[''`´ʼ]/g, "'");
+};
+
 export default function VerbPractice({ sentences, onComplete, onBack }: VerbPracticeProps) {
   const [shuffledSentences, setShuffledSentences] = useState<VerbSentence[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,8 +30,9 @@ export default function VerbPractice({ sentences, onComplete, onBack }: VerbPrac
     e.preventDefault();
     if (!currentSentence || showFeedback) return;
 
-    const isCorrect =
-      userAnswer.trim().toLowerCase() === currentSentence.answer.toLowerCase();
+    const normalizedUserAnswer = normalizeApostrophes(userAnswer.trim().toLowerCase());
+    const normalizedCorrectAnswer = normalizeApostrophes(currentSentence.answer.toLowerCase());
+    const isCorrect = normalizedUserAnswer === normalizedCorrectAnswer;
 
     setLastCorrect(isCorrect);
     setShowFeedback(true);

@@ -68,7 +68,7 @@
       { "id": "63", "english": "River", "hebrew": ["נהר"] },
       { "id": "64", "english": "Roof", "hebrew": ["גג"] },
       { "id": "65", "english": "Servant", "hebrew": ["משרת"] },
-      { "id": "66", "english": "Ship", "hebrew": ["אוניה"] },
+      { "id": "66", "english": "Ship", "hebrew": ["אוניה", "ספינה"] },
       { "id": "67", "english": "Shower", "hebrew": ["מקלחת"] },
       { "id": "68", "english": "Sink", "hebrew": ["כיור"] },
       { "id": "69", "english": "Spoon", "hebrew": ["כף"] },
