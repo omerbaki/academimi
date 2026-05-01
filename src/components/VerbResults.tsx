@@ -1,14 +1,19 @@
-import type { PracticeResult } from '../types';
+import type { VerbPracticeResult } from '../types';
 
-interface ResultsProps {
-  results: PracticeResult[];
+interface VerbResultsProps {
+  results: VerbPracticeResult[];
   onBack: () => void;
 }
 
-export default function Results({ results, onBack }: ResultsProps) {
+export default function VerbResults({ results, onBack }: VerbResultsProps) {
   const correctCount = results.filter((r) => r.correct).length;
   const total = results.length;
   const percentage = Math.round((correctCount / total) * 100);
+
+  const formatSentence = (result: VerbPracticeResult) => {
+    const { sentenceBefore, sentenceAfter, answer } = result.sentence;
+    return `${sentenceBefore} ${answer} ${sentenceAfter}`.trim();
+  };
 
   return (
     <div className="card">
@@ -22,20 +27,20 @@ export default function Results({ results, onBack }: ResultsProps) {
         </div>
 
         <h3 dir="rtl">סיכום:</h3>
-        <table className="results-table">
+        <table className="results-table verb-results-table">
           <thead>
             <tr>
-              <th>English</th>
-              <th>תשובה נכונה</th>
-              <th>התשובה שלך</th>
+              <th>Sentence</th>
+              <th>Correct Answer</th>
+              <th>Your Answer</th>
             </tr>
           </thead>
           <tbody>
             {results.map((result, index) => (
               <tr key={index} className={result.correct ? 'correct-row' : 'incorrect-row'}>
-                <td>{result.word.english}</td>
-                <td dir="rtl">{result.word.hebrew.join(' / ')}</td>
-                <td dir="rtl">{result.userAnswer || '-'}</td>
+                <td>{formatSentence(result)}</td>
+                <td>{result.sentence.answer}</td>
+                <td>{result.userAnswer || '-'}</td>
               </tr>
             ))}
           </tbody>

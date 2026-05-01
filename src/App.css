@@ -332,6 +332,44 @@ h1 {
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
 }
 
+/* Verb Practice Button */
+.verb-btn {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
+}
+
+.verb-btn:hover {
+  box-shadow: 0 8px 25px rgba(17, 153, 142, 0.5);
+}
+
+/* Verb Sentence Display */
+.verb-sentence {
+  font-size: 26px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 500;
+}
+
+.verb-blank {
+  color: #667eea;
+  font-weight: 700;
+  border-bottom: 3px solid #667eea;
+  padding: 0 4px;
+}
+
+.verb-hint {
+  color: #11998e;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Verb Results Table */
+.verb-results-table td:first-child {
+  max-width: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
   .app {
@@ -365,5 +403,14 @@ h1 {
   .results-table td {
     padding: 10px 8px;
     font-size: 14px;
+  }
+
+  .verb-sentence {
+    font-size: 20px;
+  }
+
+  .verb-results-table td:first-child {
+    max-width: 150px;
+    font-size: 12px;
   }
 }

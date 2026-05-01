@@ -65,8 +65,10 @@ export default function Practice({ words, onComplete, onBack }: PracticeProps) {
     e.preventDefault();
     if (!currentWord || showFeedback) return;
 
-    const isCorrect =
-      userAnswer.trim().toLowerCase() === currentWord.hebrew.trim().toLowerCase();
+    const normalizedAnswer = userAnswer.trim().toLowerCase();
+    const isCorrect = currentWord.hebrew.some(
+      (option) => option.trim().toLowerCase() === normalizedAnswer
+    );
 
     setLastCorrect(isCorrect);
     setShowFeedback(true);
@@ -134,7 +136,7 @@ export default function Practice({ words, onComplete, onBack }: PracticeProps) {
               <p>נכון!</p>
             ) : (
               <p>
-                לא נכון. התשובה הנכונה: <strong dir="rtl">{currentWord.hebrew}</strong>
+                לא נכון. התשובה הנכונה: <strong dir="rtl">{currentWord.hebrew.join(' / ')}</strong>
               </p>
             )}
             <button onClick={handleNext}>

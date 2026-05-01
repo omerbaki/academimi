@@ -68,7 +68,7 @@ export default function WordBankEditor({
             {bank.words.map((word) => (
               <tr key={word.id}>
                 <td>{word.english}</td>
-                <td dir="rtl">{word.hebrew}</td>
+                <td dir="rtl">{word.hebrew.join(' / ')}</td>
                 <td>
                   <button className="delete-btn" onClick={() => onDeleteWord(word.id)}>
                     Delete

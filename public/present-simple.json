@@ -1,0 +1,808 @@
+[
+  {
+    "id": "present-simple-1",
+    "name": "Present Simple Verbs",
+    "sentences": [
+      {
+        "id": "1",
+        "sentenceBefore": "I",
+        "sentenceAfter": "to go to the mall.",
+        "baseVerb": "like",
+        "answer": "like",
+        "type": "affirmative"
+      },
+      {
+        "id": "2",
+        "sentenceBefore": "He",
+        "sentenceAfter": "to play soccer.",
+        "baseVerb": "like",
+        "answer": "likes",
+        "type": "affirmative"
+      },
+      {
+        "id": "3",
+        "sentenceBefore": "She",
+        "sentenceAfter": "chocolate ice cream.",
+        "baseVerb": "love",
+        "answer": "loves",
+        "type": "affirmative"
+      },
+      {
+        "id": "4",
+        "sentenceBefore": "We",
+        "sentenceAfter": "basketball every Saturday.",
+        "baseVerb": "play",
+        "answer": "play",
+        "type": "affirmative"
+      },
+      {
+        "id": "5",
+        "sentenceBefore": "They",
+        "sentenceAfter": "to school by bus.",
+        "baseVerb": "go",
+        "answer": "go",
+        "type": "affirmative"
+      },
+      {
+        "id": "6",
+        "sentenceBefore": "Tom",
+        "sentenceAfter": "his homework after dinner.",
+        "baseVerb": "do",
+        "answer": "does",
+        "type": "affirmative"
+      },
+      {
+        "id": "7",
+        "sentenceBefore": "Emma",
+        "sentenceAfter": "the piano beautifully.",
+        "baseVerb": "play",
+        "answer": "plays",
+        "type": "affirmative"
+      },
+      {
+        "id": "8",
+        "sentenceBefore": "The cat",
+        "sentenceAfter": "all day long.",
+        "baseVerb": "sleep",
+        "answer": "sleeps",
+        "type": "affirmative"
+      },
+      {
+        "id": "9",
+        "sentenceBefore": "My friends",
+        "sentenceAfter": "video games together.",
+        "baseVerb": "play",
+        "answer": "play",
+        "type": "affirmative"
+      },
+      {
+        "id": "10",
+        "sentenceBefore": "The children",
+        "sentenceAfter": "in the park.",
+        "baseVerb": "run",
+        "answer": "run",
+        "type": "affirmative"
+      },
+      {
+        "id": "11",
+        "sentenceBefore": "David",
+        "sentenceAfter": "English very well.",
+        "baseVerb": "speak",
+        "answer": "speaks",
+        "type": "affirmative"
+      },
+      {
+        "id": "12",
+        "sentenceBefore": "Sarah",
+        "sentenceAfter": "delicious cookies.",
+        "baseVerb": "make",
+        "answer": "makes",
+        "type": "affirmative"
+      },
+      {
+        "id": "13",
+        "sentenceBefore": "The dog",
+        "sentenceAfter": "very fast.",
+        "baseVerb": "run",
+        "answer": "runs",
+        "type": "affirmative"
+      },
+      {
+        "id": "14",
+        "sentenceBefore": "You",
+        "sentenceAfter": "really hard at school.",
+        "baseVerb": "work",
+        "answer": "work",
+        "type": "affirmative"
+      },
+      {
+        "id": "15",
+        "sentenceBefore": "It",
+        "sentenceAfter": "a lot in winter.",
+        "baseVerb": "rain",
+        "answer": "rains",
+        "type": "affirmative"
+      },
+      {
+        "id": "16",
+        "sentenceBefore": "My mother",
+        "sentenceAfter": "breakfast every morning.",
+        "baseVerb": "cook",
+        "answer": "cooks",
+        "type": "affirmative"
+      },
+      {
+        "id": "17",
+        "sentenceBefore": "The boys",
+        "sentenceAfter": "football after school.",
+        "baseVerb": "play",
+        "answer": "play",
+        "type": "affirmative"
+      },
+      {
+        "id": "18",
+        "sentenceBefore": "My father",
+        "sentenceAfter": "the newspaper in the morning.",
+        "baseVerb": "read",
+        "answer": "reads",
+        "type": "affirmative"
+      },
+      {
+        "id": "19",
+        "sentenceBefore": "The girls",
+        "sentenceAfter": "to pop music.",
+        "baseVerb": "listen",
+        "answer": "listen",
+        "type": "affirmative"
+      },
+      {
+        "id": "20",
+        "sentenceBefore": "Mike",
+        "sentenceAfter": "very early every day.",
+        "baseVerb": "wake",
+        "answer": "wakes",
+        "type": "affirmative"
+      },
+      {
+        "id": "21",
+        "sentenceBefore": "I",
+        "sentenceAfter": "like broccoli.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "22",
+        "sentenceBefore": "He",
+        "sentenceAfter": "want to go outside.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "23",
+        "sentenceBefore": "She",
+        "sentenceAfter": "eat meat.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "24",
+        "sentenceBefore": "We",
+        "sentenceAfter": "have school on Sunday.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "25",
+        "sentenceBefore": "They",
+        "sentenceAfter": "live in a big city.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "26",
+        "sentenceBefore": "Tom",
+        "sentenceAfter": "like vegetables.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "27",
+        "sentenceBefore": "The cat",
+        "sentenceAfter": "like water.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "28",
+        "sentenceBefore": "My parents",
+        "sentenceAfter": "watch TV at night.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "29",
+        "sentenceBefore": "The baby",
+        "sentenceAfter": "sleep through the night.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "30",
+        "sentenceBefore": "You",
+        "sentenceAfter": "need to worry.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "31",
+        "sentenceBefore": "Daniel",
+        "sentenceAfter": "play tennis.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "32",
+        "sentenceBefore": "The children",
+        "sentenceAfter": "like homework.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "33",
+        "sentenceBefore": "Lisa",
+        "sentenceAfter": "drink coffee.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "34",
+        "sentenceBefore": "The dog",
+        "sentenceAfter": "like cats.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "35",
+        "sentenceBefore": "My brother",
+        "sentenceAfter": "clean his room.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "36",
+        "sentenceBefore": "The students",
+        "sentenceAfter": "talk during class.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "37",
+        "sentenceBefore": "It",
+        "sentenceAfter": "snow in summer.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "38",
+        "sentenceBefore": "My sister",
+        "sentenceAfter": "wake up early.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "39",
+        "sentenceBefore": "The birds",
+        "sentenceAfter": "fly at night.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "40",
+        "sentenceBefore": "Jack",
+        "sentenceAfter": "ride a bike.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "41",
+        "sentenceBefore": "",
+        "sentenceAfter": "you like pizza?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "42",
+        "sentenceBefore": "",
+        "sentenceAfter": "he play basketball?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "43",
+        "sentenceBefore": "",
+        "sentenceAfter": "she speak French?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "44",
+        "sentenceBefore": "",
+        "sentenceAfter": "they live near the school?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "45",
+        "sentenceBefore": "",
+        "sentenceAfter": "we have homework today?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "46",
+        "sentenceBefore": "",
+        "sentenceAfter": "Tom want to come?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "47",
+        "sentenceBefore": "",
+        "sentenceAfter": "the cat sleep outside?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "48",
+        "sentenceBefore": "",
+        "sentenceAfter": "your friends play video games?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "49",
+        "sentenceBefore": "",
+        "sentenceAfter": "it rain a lot here?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "50",
+        "sentenceBefore": "",
+        "sentenceAfter": "the children like ice cream?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "51",
+        "sentenceBefore": "",
+        "sentenceAfter": "Emma read books?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "52",
+        "sentenceBefore": "",
+        "sentenceAfter": "your parents work?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "53",
+        "sentenceBefore": "",
+        "sentenceAfter": "the dog like to play?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "54",
+        "sentenceBefore": "",
+        "sentenceAfter": "you have a pet?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "55",
+        "sentenceBefore": "",
+        "sentenceAfter": "Michael swim well?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "56",
+        "sentenceBefore": "",
+        "sentenceAfter": "the birds sing in the morning?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "57",
+        "sentenceBefore": "",
+        "sentenceAfter": "your brother play guitar?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "58",
+        "sentenceBefore": "",
+        "sentenceAfter": "they eat lunch at school?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "59",
+        "sentenceBefore": "",
+        "sentenceAfter": "Anna dance well?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "60",
+        "sentenceBefore": "",
+        "sentenceAfter": "you want some water?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "61",
+        "sentenceBefore": "Ben",
+        "sentenceAfter": "swimming every weekend.",
+        "baseVerb": "go",
+        "answer": "goes",
+        "type": "affirmative"
+      },
+      {
+        "id": "62",
+        "sentenceBefore": "My grandmother",
+        "sentenceAfter": "amazing stories.",
+        "baseVerb": "tell",
+        "answer": "tells",
+        "type": "affirmative"
+      },
+      {
+        "id": "63",
+        "sentenceBefore": "The sun",
+        "sentenceAfter": "in the east.",
+        "baseVerb": "rise",
+        "answer": "rises",
+        "type": "affirmative"
+      },
+      {
+        "id": "64",
+        "sentenceBefore": "Lucy",
+        "sentenceAfter": "her teeth twice a day.",
+        "baseVerb": "brush",
+        "answer": "brushes",
+        "type": "affirmative"
+      },
+      {
+        "id": "65",
+        "sentenceBefore": "The teacher",
+        "sentenceAfter": "us new words.",
+        "baseVerb": "teach",
+        "answer": "teaches",
+        "type": "affirmative"
+      },
+      {
+        "id": "66",
+        "sentenceBefore": "My cousins",
+        "sentenceAfter": "us every summer.",
+        "baseVerb": "visit",
+        "answer": "visit",
+        "type": "affirmative"
+      },
+      {
+        "id": "67",
+        "sentenceBefore": "The baby",
+        "sentenceAfter": "when she is hungry.",
+        "baseVerb": "cry",
+        "answer": "cries",
+        "type": "affirmative"
+      },
+      {
+        "id": "68",
+        "sentenceBefore": "I",
+        "sentenceAfter": "my best to help.",
+        "baseVerb": "try",
+        "answer": "try",
+        "type": "affirmative"
+      },
+      {
+        "id": "69",
+        "sentenceBefore": "The fish",
+        "sentenceAfter": "in the water.",
+        "baseVerb": "swim",
+        "answer": "swims",
+        "type": "affirmative"
+      },
+      {
+        "id": "70",
+        "sentenceBefore": "We",
+        "sentenceAfter": "dinner at seven o'clock.",
+        "baseVerb": "eat",
+        "answer": "eat",
+        "type": "affirmative"
+      },
+      {
+        "id": "71",
+        "sentenceBefore": "Oliver",
+        "sentenceAfter": "TV after school.",
+        "baseVerb": "watch",
+        "answer": "watches",
+        "type": "affirmative"
+      },
+      {
+        "id": "72",
+        "sentenceBefore": "The clock",
+        "sentenceAfter": "every hour.",
+        "baseVerb": "ring",
+        "answer": "rings",
+        "type": "affirmative"
+      },
+      {
+        "id": "73",
+        "sentenceBefore": "They",
+        "sentenceAfter": "a lot of water.",
+        "baseVerb": "drink",
+        "answer": "drink",
+        "type": "affirmative"
+      },
+      {
+        "id": "74",
+        "sentenceBefore": "Sophie",
+        "sentenceAfter": "beautiful pictures.",
+        "baseVerb": "draw",
+        "answer": "draws",
+        "type": "affirmative"
+      },
+      {
+        "id": "75",
+        "sentenceBefore": "The rabbit",
+        "sentenceAfter": "carrots.",
+        "baseVerb": "eat",
+        "answer": "eats",
+        "type": "affirmative"
+      },
+      {
+        "id": "76",
+        "sentenceBefore": "My uncle",
+        "sentenceAfter": "live very far away.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "77",
+        "sentenceBefore": "The flowers",
+        "sentenceAfter": "grow in winter.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "78",
+        "sentenceBefore": "Noah",
+        "sentenceAfter": "like spicy food.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "79",
+        "sentenceBefore": "I",
+        "sentenceAfter": "understand this question.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "80",
+        "sentenceBefore": "The mouse",
+        "sentenceAfter": "like the cat.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "81",
+        "sentenceBefore": "",
+        "sentenceAfter": "the teacher give homework?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "82",
+        "sentenceBefore": "",
+        "sentenceAfter": "you know the answer?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "83",
+        "sentenceBefore": "",
+        "sentenceAfter": "the bus come at eight?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "84",
+        "sentenceBefore": "",
+        "sentenceAfter": "they have a car?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "85",
+        "sentenceBefore": "",
+        "sentenceAfter": "your sister like math?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "86",
+        "sentenceBefore": "James",
+        "sentenceAfter": "his room every day.",
+        "baseVerb": "clean",
+        "answer": "cleans",
+        "type": "affirmative"
+      },
+      {
+        "id": "87",
+        "sentenceBefore": "The turtle",
+        "sentenceAfter": "very slowly.",
+        "baseVerb": "move",
+        "answer": "moves",
+        "type": "affirmative"
+      },
+      {
+        "id": "88",
+        "sentenceBefore": "My neighbors",
+        "sentenceAfter": "a beautiful garden.",
+        "baseVerb": "have",
+        "answer": "have",
+        "type": "affirmative"
+      },
+      {
+        "id": "89",
+        "sentenceBefore": "Ella",
+        "sentenceAfter": "a red bike.",
+        "baseVerb": "have",
+        "answer": "has",
+        "type": "affirmative"
+      },
+      {
+        "id": "90",
+        "sentenceBefore": "The monkeys",
+        "sentenceAfter": "on the trees.",
+        "baseVerb": "climb",
+        "answer": "climb",
+        "type": "affirmative"
+      },
+      {
+        "id": "91",
+        "sentenceBefore": "My aunt",
+        "sentenceAfter": "speak Spanish.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "92",
+        "sentenceBefore": "We",
+        "sentenceAfter": "eat fast food very often.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "93",
+        "sentenceBefore": "The elephant",
+        "sentenceAfter": "run fast.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "94",
+        "sentenceBefore": "You",
+        "sentenceAfter": "have to go now.",
+        "baseVerb": "don't/doesn't",
+        "answer": "don't",
+        "type": "negative"
+      },
+      {
+        "id": "95",
+        "sentenceBefore": "Grace",
+        "sentenceAfter": "like cold weather.",
+        "baseVerb": "don't/doesn't",
+        "answer": "doesn't",
+        "type": "negative"
+      },
+      {
+        "id": "96",
+        "sentenceBefore": "",
+        "sentenceAfter": "the movie start at six?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "97",
+        "sentenceBefore": "",
+        "sentenceAfter": "your grandparents live nearby?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "98",
+        "sentenceBefore": "",
+        "sentenceAfter": "Henry play chess?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      },
+      {
+        "id": "99",
+        "sentenceBefore": "",
+        "sentenceAfter": "the shops close early?",
+        "baseVerb": "Do/Does",
+        "answer": "Do",
+        "type": "question"
+      },
+      {
+        "id": "100",
+        "sentenceBefore": "",
+        "sentenceAfter": "Mia know about the party?",
+        "baseVerb": "Do/Does",
+        "answer": "Does",
+        "type": "question"
+      }
+    ]
+  }
+]
