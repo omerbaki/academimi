@@ -8,7 +8,10 @@ interface VerbPracticeProps {
 }
 
 const normalizeApostrophes = (text: string) => {
-  return text.replace(/[''`´ʼ]/g, "'");
+  // Normalize all apostrophe/quote variants to a plain apostrophe.
+  // iOS/Safari smart punctuation replaces ' (U+0027) with ' (U+2019) or similar,
+  // causing comparisons to fail for words like "don't" and "doesn't".
+  return text.replace(/[\u2018\u2019\u201A\u201B\u2032\u2035\u02BC\u02B9\u02BB\u0060\u00B4\uFF07]/g, "'");
 };
 
 export default function VerbPractice({ sentences, onComplete, onBack }: VerbPracticeProps) {
