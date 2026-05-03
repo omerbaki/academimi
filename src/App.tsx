@@ -9,13 +9,13 @@ import './App.css';
 const WRONG_WORDS_KEY = 'wrong-words';
 const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL as string | undefined;
 
-function notifyTestComplete(testType: string, correct: number, total: number): void {
+function notifyTestComplete(testType: string, correct: number, total: number, details: string): void {
   if (!FORMSPREE_URL) return;
   const score = `${Math.round((correct / total) * 100)}%`;
   fetch(FORMSPREE_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify({ test_type: testType, score, correct: `${correct} / ${total}` }),
+    body: JSON.stringify({ test_type: testType, score, correct: `${correct} / ${total}`, details }),
   }).catch(() => {});
 }
 
@@ -104,7 +104,10 @@ function App() {
     }
 
     const correct = practiceResults.filter((r) => r.correct).length;
-    notifyTestComplete('מבחן מילים', correct, practiceResults.length);
+    const details = practiceResults
+      .map((r) => `${r.correct ? '✅' : '❌'} ${r.word.english} → ${r.word.hebrew.join(' / ')} (answered: ${r.userAnswer || '—'})`)
+      .join('\n');
+    notifyTestComplete('מבחן מילים', correct, practiceResults.length, details);
 
     setResults(practiceResults);
     setMode('results');
@@ -119,7 +122,10 @@ function App() {
     setWrongWords(remaining);
 
     const correct = practiceResults.filter((r) => r.correct).length;
-    notifyTestComplete('מבחן מילים שטעיתי', correct, practiceResults.length);
+    const details = practiceResults
+      .map((r) => `${r.correct ? '✅' : '❌'} ${r.word.english} → ${r.word.hebrew.join(' / ')} (answered: ${r.userAnswer || '—'})`)
+      .join('\n');
+    notifyTestComplete('מבחן מילים שטעיתי', correct, practiceResults.length, details);
 
     setResults(practiceResults);
     setMode('results');
@@ -127,7 +133,10 @@ function App() {
 
   const handleVerbPracticeComplete = (practiceResults: VerbPracticeResult[]) => {
     const correct = practiceResults.filter((r) => r.correct).length;
-    notifyTestComplete('מבחן פעלים', correct, practiceResults.length);
+    const details = practiceResults
+      .map((r) => `${r.correct ? '✅' : '❌'} ${r.sentence.sentenceBefore} ___ ${r.sentence.sentenceAfter} → ${r.sentence.answer} (answered: ${r.userAnswer || '—'})`)
+      .join('\n');
+    notifyTestComplete('מבחן פעלים', correct, practiceResults.length, details);
 
     setVerbResults(practiceResults);
     setMode('verbResults');
