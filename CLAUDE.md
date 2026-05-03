@@ -1,4 +1,4 @@
-# Dictation App
+# Academimi
 
 Hebrew-English dictation practice app for kids.
 

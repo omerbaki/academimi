@@ -7,6 +7,17 @@ import VerbResults from './components/VerbResults';
 import './App.css';
 
 const WRONG_WORDS_KEY = 'wrong-words';
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL as string | undefined;
+
+function notifyTestComplete(testType: string, correct: number, total: number): void {
+  if (!FORMSPREE_URL) return;
+  const score = `${Math.round((correct / total) * 100)}%`;
+  fetch(FORMSPREE_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({ test_type: testType, score, correct: `${correct} / ${total}` }),
+  }).catch(() => {});
+}
 
 function getStoredWrongWords(): Word[] {
   try {
@@ -92,6 +103,9 @@ function App() {
       setWrongWords(merged);
     }
 
+    const correct = practiceResults.filter((r) => r.correct).length;
+    notifyTestComplete('מבחן מילים', correct, practiceResults.length);
+
     setResults(practiceResults);
     setMode('results');
   };
@@ -104,11 +118,17 @@ function App() {
     saveStoredWrongWords(remaining);
     setWrongWords(remaining);
 
+    const correct = practiceResults.filter((r) => r.correct).length;
+    notifyTestComplete('מבחן מילים שטעיתי', correct, practiceResults.length);
+
     setResults(practiceResults);
     setMode('results');
   };
 
   const handleVerbPracticeComplete = (practiceResults: VerbPracticeResult[]) => {
+    const correct = practiceResults.filter((r) => r.correct).length;
+    notifyTestComplete('מבחן פעלים', correct, practiceResults.length);
+
     setVerbResults(practiceResults);
     setMode('verbResults');
   };
