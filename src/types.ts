@@ -10,12 +10,16 @@ export interface WordBank {
   words: Word[];
 }
 
-export type AppMode = 'menu' | 'banks' | 'manage' | 'practice' | 'results' | 'verbPractice' | 'verbResults';
+export type AppMode = 'menu' | 'banks' | 'manage' | 'practice' | 'results' | 'verbPractice' | 'verbResults' | 'dictation';
 
 export interface PracticeResult {
   word: Word;
   userAnswer: string;
   correct: boolean;
+  userEnglish?: string;
+  userHebrew?: string;
+  englishCorrect?: boolean;
+  hebrewCorrect?: boolean;
 }
 
 export interface VerbSentence {

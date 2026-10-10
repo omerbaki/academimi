@@ -1,0 +1,21 @@
+[
+  {
+    "id": "default-1",
+    "name": "מילים להכתבה ביום שני... 12/10",
+    "words": [
+      { "id": "1", "english": "About", "hebrew": ["לגבי", "בערך"] },
+      { "id": "2", "english": "Clever", "hebrew": ["חכם"] },
+      { "id": "3", "english": "Decide", "hebrew": ["להחליט"] },
+      { "id": "4", "english": "Famous", "hebrew": ["מפורסם"] },
+      { "id": "5", "english": "Mountain", "hebrew": ["הר"] },
+      { "id": "6", "english": "Nature", "hebrew": ["טבע"] },
+      { "id": "7", "english": "Reason", "hebrew": ["סיבה"] },
+      { "id": "8", "english": "Return", "hebrew": ["לחזור"] },
+      { "id": "9", "english": "Saw", "hebrew": ["ראה"] },
+      { "id": "10", "english": "Several", "hebrew": ["כמה אחדים"] },
+      { "id": "11", "english": "Still", "hebrew": ["עדיין"] },
+      { "id": "12", "english": "Thousands", "hebrew": ["אלפים"] },
+      { "id": "13", "english": "The cold", "hebrew": ["הקור"] }
+    ]
+  }
+]

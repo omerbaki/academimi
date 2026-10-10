@@ -4,6 +4,7 @@ import Practice from './components/Practice';
 import Results from './components/Results';
 import VerbPractice from './components/VerbPractice';
 import VerbResults from './components/VerbResults';
+import Dictation from './components/Dictation';
 import './App.css';
 
 const WRONG_WORDS_KEY = 'wrong-words';
@@ -36,6 +37,7 @@ function App() {
   const [mode, setMode] = useState<AppMode>('menu');
   const [banks, setBanks] = useState<WordBank[]>([]);
   const [verbBanks, setVerbBanks] = useState<VerbBank[]>([]);
+  const [dictationWords, setDictationWords] = useState<Word[]>([]);
   const [practiceWords, setPracticeWords] = useState<Word[]>([]);
   const [practiceSentences, setPracticeSentences] = useState<VerbSentence[]>([]);
   const [results, setResults] = useState<PracticeResult[]>([]);
@@ -48,14 +50,21 @@ function App() {
     Promise.all([
       fetch('/default-banks.json').then((res) => res.json()),
       fetch('/present-simple.json').then((res) => res.json()),
+      fetch('/dictation.json').then((res) => res.json()),
     ])
-      .then(([defaultBanks, verbBanksData]: [WordBank[], VerbBank[]]) => {
+      .then(([defaultBanks, verbBanksData, dictationBanks]: [WordBank[], VerbBank[], WordBank[]]) => {
         const filtered = defaultBanks.map((bank) => ({
           ...bank,
           words: bank.words.filter((w) => w.english && w.hebrew && w.hebrew.length > 0),
         }));
         setBanks(filtered);
         setVerbBanks(verbBanksData);
+        // Prefix ids so dictation words don't collide with default-bank ids in the wrong-words list
+        setDictationWords(
+          (dictationBanks[0]?.words ?? [])
+            .filter((w) => w.english && w.hebrew && w.hebrew.length > 0)
+            .map((w) => ({ ...w, id: `dictation-${w.id}` }))
+        );
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -83,6 +92,12 @@ function App() {
     setMode('verbPractice');
   };
 
+  const startDictation = () => {
+    setIsWrongWordsMode(false);
+    setPracticeWords(dictationWords);
+    setMode('dictation');
+  };
+
   const startWrongWordsTest = () => {
     const shuffled = [...wrongWords].sort(() => Math.random() - 0.5);
     setIsWrongWordsMode(true);
@@ -108,6 +123,29 @@ function App() {
       .map((r) => `${r.correct ? '✅' : '❌'} ${r.word.english} → ${r.word.hebrew.join(' / ')} (answered: ${r.userAnswer || '—'})`)
       .join('\n');
     notifyTestComplete('מבחן מילים', correct, practiceResults.length, details);
+
+    setResults(practiceResults);
+    setMode('results');
+  };
+
+  const handleDictationComplete = (practiceResults: PracticeResult[]) => {
+    const newlyFailed = practiceResults
+      .filter((r) => !r.correct)
+      .map((r) => r.word);
+
+    if (newlyFailed.length > 0) {
+      const existing = getStoredWrongWords();
+      const existingIds = new Set(existing.map((w) => w.id));
+      const merged = [...existing, ...newlyFailed.filter((w) => !existingIds.has(w.id))];
+      saveStoredWrongWords(merged);
+      setWrongWords(merged);
+    }
+
+    const correct = practiceResults.filter((r) => r.correct).length;
+    const details = practiceResults
+      .map((r) => `${r.correct ? '✅' : '❌'} ${r.word.english} → ${r.word.hebrew.join(' / ')} (answered: ${r.userAnswer || '—'})`)
+      .join('\n');
+    notifyTestComplete('הכתבה', correct, practiceResults.length, details);
 
     setResults(practiceResults);
     setMode('results');
@@ -158,7 +196,7 @@ function App() {
       {mode === 'menu' && (
         <div className="card">
           <div className="bank-selection">
-            {allWords.length === 0 && allSentences.length === 0 ? (
+            {allWords.length === 0 && allSentences.length === 0 && dictationWords.length === 0 ? (
               <p>No content available.</p>
             ) : (
               <div className="bank-buttons">
@@ -171,6 +209,11 @@ function App() {
                       מבחן 10 מילים
                     </button>
                   </>
+                )}
+                {dictationWords.length > 0 && (
+                  <button onClick={startDictation} className="bank-btn dictation-btn">
+                    הכתבה
+                  </button>
                 )}
                 {allSentences.length > 0 && (
                   <button onClick={startVerbTest} className="bank-btn verb-btn">
@@ -192,6 +235,14 @@ function App() {
         <Practice
           words={practiceWords}
           onComplete={isWrongWordsMode ? handleWrongWordsPracticeComplete : handlePracticeComplete}
+          onBack={handleBackToMenu}
+        />
+      )}
+
+      {mode === 'dictation' && practiceWords.length > 0 && (
+        <Dictation
+          words={practiceWords}
+          onComplete={handleDictationComplete}
           onBack={handleBackToMenu}
         />
       )}

@@ -9,6 +9,7 @@ export default function Results({ results, onBack }: ResultsProps) {
   const correctCount = results.filter((r) => r.correct).length;
   const total = results.length;
   const percentage = Math.round((correctCount / total) * 100);
+  const isDictation = results.some((r) => r.userEnglish !== undefined);
 
   return (
     <div className="card">
@@ -22,24 +23,51 @@ export default function Results({ results, onBack }: ResultsProps) {
         </div>
 
         <h3 dir="rtl">סיכום:</h3>
-        <table className="results-table">
-          <thead>
-            <tr>
-              <th>English</th>
-              <th>תשובה נכונה</th>
-              <th>התשובה שלך</th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.map((result, index) => (
-              <tr key={index} className={result.correct ? 'correct-row' : 'incorrect-row'}>
-                <td>{result.word.english}</td>
-                <td dir="rtl">{result.word.hebrew.join(' / ')}</td>
-                <td dir="rtl">{result.userAnswer || '-'}</td>
+        {isDictation ? (
+          <table className="results-table dictation-results-table">
+            <thead>
+              <tr>
+                <th>English</th>
+                <th>התשובה שלך</th>
+                <th>עברית</th>
+                <th>התרגום שלך</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {results.map((result, index) => (
+                <tr key={index} className={result.correct ? 'correct-row' : 'incorrect-row'}>
+                  <td className={result.englishCorrect === false ? 'part-wrong' : undefined}>
+                    {result.word.english}
+                  </td>
+                  <td dir="ltr">{result.userEnglish || '-'}</td>
+                  <td dir="rtl" className={result.hebrewCorrect === false ? 'part-wrong' : undefined}>
+                    {result.word.hebrew.join(' / ')}
+                  </td>
+                  <td dir="rtl">{result.userHebrew || '-'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <table className="results-table">
+            <thead>
+              <tr>
+                <th>English</th>
+                <th>תשובה נכונה</th>
+                <th>התשובה שלך</th>
+              </tr>
+            </thead>
+            <tbody>
+              {results.map((result, index) => (
+                <tr key={index} className={result.correct ? 'correct-row' : 'incorrect-row'}>
+                  <td>{result.word.english}</td>
+                  <td dir="rtl">{result.word.hebrew.join(' / ')}</td>
+                  <td dir="rtl">{result.userAnswer || '-'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
 
         <button onClick={onBack}>חזרה</button>
       </div>
